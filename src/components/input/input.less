@@ -1,0 +1,22 @@
+@import url(../../styles/index.less);
+
+.input {
+  width: 100%;
+  font-size: 14px;
+  color: @black;
+  border: 1px solid @gray;
+  padding: 10px 0 10px 15px;
+
+  &--invalid {
+    border-color: @red;
+  }
+
+  &::placeholder {
+    font-size: 13px;
+    color: @placeholder;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

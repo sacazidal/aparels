@@ -1,0 +1,7 @@
+<button [class]="`btn btn--${styleName}`" [type]="type" [disabled]="isLoading">
+  @if (isLoading) {
+    {{ textLoading | uppercase }}
+  } @else {
+    {{ text | uppercase }}
+  }
+</button>

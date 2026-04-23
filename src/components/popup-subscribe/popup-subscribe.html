@@ -1,0 +1,32 @@
+@if (isVisible()) {
+  <div class="popup">
+    <div class="popup__container">
+      <button class="popup__closed" type="button" (click)="dismiss()">
+        <img src="/images/exit.svg" alt="close" loading="eager" />
+      </button>
+      <div class="popup__content">
+        <div class="popup__group">
+          <img src="/images/popup/subs.webp" alt="hand" loading="eager" />
+          <div class="popup__text">
+            <p class="popup__title">JOIN MAILING LIST</p>
+            <p class="popup__subtitle">
+              {{
+                'For new launches, exclusives & offers, share your email below'
+                  | uppercase
+              }}
+            </p>
+          </div>
+        </div>
+
+        <form class="popup__form" [formGroup]="form" (ngSubmit)="onSubmit()">
+          <app-input
+            [control]="form.controls.email"
+            type="email"
+            placeholder="Email Address"
+          />
+          <app-button text="subscribe" [isLoading]="isLoading()" />
+        </form>
+      </div>
+    </div>
+  </div>
+}

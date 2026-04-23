@@ -9,7 +9,20 @@
     "frontend": {
       "projectType": "application",
       "schematics": {
+        "@schematics/angular:service": {
+          "path": "src"
+        },
+        "@schematics/angular:guard": {
+          "path": "src"
+        },
+        "@schematics/angular:interceptor": {
+          "path": "src"
+        },
+        "@schematics/angular:interface": {
+          "path": "src"
+        },
         "@schematics/angular:component": {
+          "path": "src",
           "style": "less"
         }
       },
@@ -29,9 +42,10 @@
                 "input": "public"
               }
             ],
-            "styles": [
-              "src/styles.less"
-            ]
+            "stylePreprocessorOptions": {
+              "includePaths": ["src/styles"]
+            },
+            "styles": ["src/styles.less"]
           },
           "configurations": {
             "production": {
@@ -68,9 +82,6 @@
             }
           },
           "defaultConfiguration": "development"
-        },
-        "test": {
-          "builder": "@angular/build:unit-test"
         }
       }
     }

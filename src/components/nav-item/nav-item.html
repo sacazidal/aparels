@@ -1,0 +1,28 @@
+<nav class="nav">
+  <ul class="nav__list">
+    @for (item of navItems; track item.id) {
+      <li class="nav__item">
+        @switch (item.type) {
+          @case ('internal_link') {
+            <a [routerLink]="item.link">{{ item.label }}</a>
+          }
+          @case ('external_link') {
+            <a [href]="item.link" target="_blank">{{ item.label }}</a>
+          }
+          @case ('action') {
+            <button
+              class="nav__item"
+              type="button"
+              (click)="openComponent(item.id)"
+            >
+              {{ item.label }}
+              @if (item.id === 'cart') {
+                <span>({{ cartCount }})</span>
+              }
+            </button>
+          }
+        }
+      </li>
+    }
+  </ul>
+</nav>

@@ -2,3 +2,7 @@ export { ButtonComponent } from './button/button';
 export { InputComponent } from './input/input';
 export { PopupSubscribeComponent } from './popup-subscribe/popup-subscribe';
 export { OverheaderComponent } from './overheader/overheader';
+export { HeaderComponent } from './header/header';
+export { NavItemComponent } from './nav-item/nav-item';
+export { SearchComponent } from './search/search';
+export { FooterComponent } from './footer/footer';

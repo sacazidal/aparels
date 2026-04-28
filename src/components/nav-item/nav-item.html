@@ -14,6 +14,7 @@
               class="nav__item"
               type="button"
               (click)="openComponent(item.id)"
+              [id]="item.id"
             >
               {{ item.label }}
               @if (item.id === 'cart') {

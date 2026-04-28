@@ -1,0 +1,21 @@
+<header class="header">
+  <div class="header__container">
+    <a routerLink="/">
+      <img src="/images/logo.svg" alt="logo" loading="eager" />
+    </a>
+
+    <app-nav-item
+      [navItems]="navItems"
+      [cartCount]="cartCount()"
+      (clicked)="openComponent($event)"
+    />
+  </div>
+</header>
+
+@if (isSearchOpen()) {
+  <app-search />
+}
+
+@if (isCartOpen()) {
+  <div class="cart">cart</div>
+}

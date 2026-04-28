@@ -1,0 +1,26 @@
+<div class="search">
+  <input
+    class="search__input"
+    type="text"
+    placeholder="Looking for something?"
+    [formControl]="searchControl"
+  />
+  <button class="search__image" type="button">
+    @if (isLoading()) {
+      <img src="/images/search/loading.svg" alt="loading" />
+    } @else {
+      <img src="/images/search/search.svg" alt="magnifier" />
+    }
+  </button>
+
+  @if (results().length > 0) {
+    <div class="search__result">
+      @for (item of results(); track item.id) {
+        <a [routerLink]="item.id" class="search__item">
+          <img [src]="item.image" [alt]="item.name" />
+          <p class="search__title">{{ item.name | titlecase }}</p>
+        </a>
+      }
+    </div>
+  }
+</div>

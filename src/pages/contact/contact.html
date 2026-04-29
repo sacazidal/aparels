@@ -1,0 +1,25 @@
+<section class="contact">
+  <div class="contact__container">
+    <img src="/images/contact/contact-image.webp" alt="contact-image" />
+
+    <app-form
+      [form]="contactUsForm"
+      (submit)="onSubmit($event)"
+      label="Contact us"
+    >
+      <div class="contact__group">
+        <app-input placeholder="Name" [control]="contactUsForm.controls.name" />
+        <app-input
+          placeholder="Email"
+          type="email"
+          [control]="contactUsForm.controls.email"
+        />
+      </div>
+      <app-input placeholder="Phone" [control]="contactUsForm.controls.phone" />
+      <app-input
+        placeholder="Message"
+        [control]="contactUsForm.controls.message"
+      />
+    </app-form>
+  </div>
+</section>

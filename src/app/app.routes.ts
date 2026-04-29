@@ -12,6 +12,10 @@ export const routes: Routes = [
     loadComponent: () => import('../pages').then((m) => m.HomePage),
   },
   {
+    path: UI_ROUTES.CONTACT,
+    loadComponent: () => import('../pages').then((m) => m.ContactPage),
+  },
+  {
     path: UI_ROUTES.NOT_FOUND,
     loadComponent: () => import('../pages').then((m) => m.NotFoundPage),
   },

@@ -1,5 +1,6 @@
 import { v4 } from 'uuid';
 import { NavItem } from '../models';
+import { UI_ROUTES } from '../core/constants';
 
 export const headerNavItems: NavItem[] = [
   {
@@ -49,7 +50,7 @@ export const footerNavItems: NavItem[] = [
     id: v4(),
     label: 'CONTACT',
     type: 'internal_link',
-    link: '',
+    link: UI_ROUTES.CONTACT,
   },
   {
     id: v4(),

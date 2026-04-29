@@ -6,3 +6,4 @@ export { HeaderComponent } from './header/header';
 export { NavItemComponent } from './nav-item/nav-item';
 export { SearchComponent } from './search/search';
 export { FooterComponent } from './footer/footer';
+export { FormComponent } from './form/form';

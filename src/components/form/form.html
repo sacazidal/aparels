@@ -1,0 +1,7 @@
+<form class="form" [formGroup]="form" (ngSubmit)="onSubmit($event)">
+  <h1 class="form__title">{{ label | uppercase }}</h1>
+  <div class="form__fields">
+    <ng-content></ng-content>
+  </div>
+  <app-button text="send" [isLoading]="isLoading" />
+</form>

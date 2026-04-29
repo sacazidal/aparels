@@ -11,4 +11,8 @@ export const routes: Routes = [
     path: UI_ROUTES.HOME,
     loadComponent: () => import('../pages').then((m) => m.HomePage),
   },
+  {
+    path: UI_ROUTES.NOT_FOUND,
+    loadComponent: () => import('../pages').then((m) => m.NotFoundPage),
+  },
 ];

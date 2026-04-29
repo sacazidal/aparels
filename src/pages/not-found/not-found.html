@@ -1,0 +1,14 @@
+<section class="not-found">
+  <div class="not-found__container">
+    <div class="not-found__content">
+      <p class="not-found__text not-found__title">{{ 'Sorry,' | uppercase }}</p>
+      <p class="not-found__text not-found__subtitle">
+        {{ 'the page you were looking for could not be found.' | uppercase }}
+      </p>
+    </div>
+
+    <a [routerLink]="'/' + UI_ROUTES.HOME">
+      <app-button type="button" text="RETURN TO THE HOMEPAGE" />
+    </a>
+  </div>
+</section>
